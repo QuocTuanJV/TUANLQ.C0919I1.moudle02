@@ -1,8 +1,15 @@
 package com.tuan.week01;
 
+import java.util.Scanner;
+
 public class ReadTextFromNumber {
     public static void main(String[] args) {
-        System.out.println(getTextFromNumber(30));
+//        System.out.println(getTextFromNumber(30));
+        Scanner sc = new Scanner(System.in);
+        int myNumber = 0;
+        System.out.println("Input your number:");
+        myNumber = sc.nextInt();
+        System.out.println(getTextFromNumber(myNumber));
     }
 
     public static String getTextFromNumber(int number) {
