@@ -18,6 +18,6 @@ public class Cylinder extends Circle {
         return super.getArea() * this.height;
     }
     public String toString(){
-        return "Cylinder have radius: " + this.getRadius() + " and color is: " + this.getColor() + " and height: " + this.getHeight();
+        return "Cylinder have radius: " + super.getRadius() + " and color is: " + super.getColor() + " and height: " + this.getHeight();
     }
 }

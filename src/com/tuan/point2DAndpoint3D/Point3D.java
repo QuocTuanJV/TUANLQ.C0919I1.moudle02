@@ -5,8 +5,9 @@ public class Point3D extends Point2D {
     public Point3D (){
 
     }
-    public Point3D(float x, float y, float z){
-        super(x, y);
+
+    public Point3D(float z){
+        //super(x, y);
         this.z = z;
     }
 
