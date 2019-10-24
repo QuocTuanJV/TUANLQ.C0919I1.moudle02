@@ -38,4 +38,5 @@ public class Point2D {
     public String toString() {
         return "(" + this.getX() + "," + this.getX() + ")";
     }
+
 }
