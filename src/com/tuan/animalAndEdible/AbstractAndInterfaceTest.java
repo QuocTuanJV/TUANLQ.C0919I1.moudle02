@@ -16,6 +16,7 @@ public class AbstractAndInterfaceTest {
             if(animal instanceof Chicken){//neu dong vat tim thay la Chicken
                 Edible edibler = (Chicken) animal;//tao tham chieu la lop cha, con vung nho la lop con
                 System.out.println(edibler.howToEat());
+                System.out.println(edibler instanceof Animal);
             }
 
         }

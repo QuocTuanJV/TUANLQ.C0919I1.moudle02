@@ -37,8 +37,10 @@ package com.tuan.extendcourse;
         return "A Shape with color of " + this.getColor() +
                 " and " + this.setFilledText();
     }
-}
-class Circle extends Shape{
+
+//     public abstract void resize(int i);
+ }
+class Circle extends Shape implements Resizeable{
     private double radius = 1.0;
     public Circle(){
 
@@ -71,8 +73,15 @@ class Circle extends Shape{
                " subclass of " + super.toString();
     }
 
+
+    @Override
+    public void resize123(double percent) {
+        System.out.println("Area of Circle before increase " + this.getArea());
+        System.out.println("Area of Circle after increase " + percent + " is: " + this.getArea() * percent);
+    }
+
 }
-class Rectangle extends Shape {
+class Rectangle extends Shape implements Resizeable {
     private double width = 1.0;
     private double length = 1.0;
     public Rectangle(){
@@ -112,6 +121,12 @@ class Rectangle extends Shape {
     public String toString(){
         return "A Rectangle with=" + this.width + " and length= " + this.length +", which is a subclass of " + super.toString();
     }
+
+    @Override
+    public void resize123(double percent) {
+        System.out.println("Area of Rectangle before increase " + this.getArea());
+        System.out.println("Area of Rectangle after increase " + percent + " is: " + this.getArea() * percent);
+    }
 }
 class Square extends Rectangle{
      public Square(){
@@ -140,5 +155,8 @@ class Square extends Rectangle{
      public String toString(){
          return "A Square with side = " + this.getSide() +", which is a subclass of " + super.toString();
      }
+}
+interface Resizeable{
+     void resize123(double percent);
 }
 
